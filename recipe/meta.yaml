@@ -9,6 +9,9 @@ source:
   url: https://cmake.org/files/v3.5/cmake-3.5.0-win32-x86.zip  # [win]
   fn: cmake-3.5.0-win32-x86.zip # [win]
 
+build:
+  number: 1
+
 test:
   commands:
     - cmake --version
@@ -22,5 +25,6 @@ about:
 extra:
   recipe-maintainers:
     - groutr
+    - jakirkham
     - ocefpaf
     - msarahan
