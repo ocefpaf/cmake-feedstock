@@ -3,9 +3,9 @@ About cmake
 
 Home: http://www.cmake.org/
 
-Package license: 3-clause BSD
+Package license: BSD 3-clause
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: CMake is an extensible, open-source system that manages the build process
 
@@ -69,9 +69,15 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cmake-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/cmake-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/cmake-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cmake-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cmake-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cmake-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cmake/badges/version.svg)](https://anaconda.org/conda-forge/cmake)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cmake/badges/downloads.svg)](https://anaconda.org/conda-forge/cmake)
 
 
 Updating cmake-feedstock
