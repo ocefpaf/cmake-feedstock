@@ -15,6 +15,28 @@ build:
   number: 3
   detect_binary_files_with_prefix: true
 
+requirements:        # [unix]
+  build:             # [unix]
+    - toolchain      # [unix]
+    - bzip2 1.0.*    # [unix]
+    - curl           # [unix]
+    - expat          # [unix]
+    - jsoncpp        # [unix]
+    - libarchive     # [unix]
+    - ncurses 5.9*   # [unix]
+    - xz 5.0.*       # [unix]
+    - zlib 1.2.*     # [unix]
+
+  run:               # [unix]
+    - bzip2 1.0.*    # [unix]
+    - curl           # [unix]
+    - expat          # [unix]
+    - jsoncpp        # [unix]
+    - libarchive     # [unix]
+    - ncurses 5.9*   # [unix]
+    - xz 5.0.*       # [unix]
+    - zlib 1.2.*     # [unix]
+
 test:
   commands:
     - cmake --version
