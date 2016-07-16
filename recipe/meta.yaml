@@ -12,12 +12,37 @@ source:
   sha256: 807f96230c889b10f2957a47585426af4cdb116a8a77f1caecca83b7d7ab862b  # [win]
 
 build:
-  number: 3
+  number: 4
   detect_binary_files_with_prefix: true
 
+requirements:        # [unix]
+  build:             # [unix]
+    - toolchain      # [unix]
+    - bzip2 1.0.*    # [unix]
+    - curl           # [unix]
+    - expat          # [unix]
+    - jsoncpp        # [unix]
+    - libarchive     # [unix]
+    - ncurses 5.9*   # [unix]
+    - xz 5.0.*       # [unix]
+    - zlib 1.2.*     # [unix]
+
+  run:               # [unix]
+    - bzip2 1.0.*    # [unix]
+    - curl           # [unix]
+    - expat          # [unix]
+    - jsoncpp        # [unix]
+    - libarchive     # [unix]
+    - ncurses 5.9*   # [unix]
+    - xz 5.0.*       # [unix]
+    - zlib 1.2.*     # [unix]
+
 test:
+  files:
+    - SSLTest.cmake
   commands:
     - cmake --version
+    - cmake -V -P SSLTest.cmake
 
 about:
   home: http://www.cmake.org/
@@ -27,6 +52,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - blowekamp
     - groutr
     - jakirkham
     - ocefpaf
