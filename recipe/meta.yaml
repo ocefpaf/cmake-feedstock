@@ -1,18 +1,21 @@
+{% set major_minor = "3.6" %}
+{% set version = major_minor + ".1" %}
+
 package:
   name: cmake
-  version: 3.5.0
+  version: {{ version }}
 
 source:
-  url: https://cmake.org/files/v3.5/cmake-3.5.0.tar.gz                      # [not win]
-  fn: cmake-3.5.0.tar.gz                                                    # [not win]
-  sha256: 92c83ad8a4fd6224cf6319a60b399854f55b38ebe9d297c942408b792b1a9efa  # [not win]
+  url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}.tar.gz              # [not win]
+  fn: cmake-{{ version }}.tar.gz                                                          # [not win]
+  sha256: 28ee98ec40427d41a45673847db7a905b59ce9243bb866eaf59dce0f58aaef11                # [not win]
 
-  url: https://cmake.org/files/v3.5/cmake-3.5.0-win32-x86.zip               # [win]
-  fn: cmake-3.5.0-win32-x86.zip                                             # [win]
-  sha256: 807f96230c889b10f2957a47585426af4cdb116a8a77f1caecca83b7d7ab862b  # [win]
+  url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}-win32-x86.zip       # [win]
+  fn: cmake-{{ version }}-win32-x86.zip                                                   # [win]
+  sha256: 60089b4e05a997edda49f40d4b6db883e0ce5bbe9fdedb5106739dbfe58a8055                # [win]
 
 build:
-  number: 5
+  number: 0
   detect_binary_files_with_prefix: true
 
 requirements:        # [unix]
