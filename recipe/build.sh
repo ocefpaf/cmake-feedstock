@@ -19,16 +19,11 @@ fi
 
 ./bootstrap \
              --prefix="${PREFIX}" \
-             --system-curl \
-             --system-bzip2 \
-             --system-expat \
-             --system-jsoncpp \
-             --system-libarchive \
-             --system-liblzma \
-             --system-zlib \
+             --system-libs \
              --no-qt-gui \
              -- \
              -DCMAKE_BUILD_TYPE:STRING=Release \
+             -DCMAKE_FIND_ROOT_PATH="${PREFIX}" \
 
 make
 eval ${LIBRARY_SEARCH_VAR}="${PREFIX}/lib" make install
