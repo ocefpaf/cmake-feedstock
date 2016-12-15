@@ -11,6 +11,18 @@ Summary: CMake is an extensible, open-source system that manages the build proce
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cmake-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cmake-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/cmake-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cmake-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cmake-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cmake-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cmake/badges/version.svg)](https://anaconda.org/conda-forge/cmake)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cmake/badges/downloads.svg)](https://anaconda.org/conda-forge/cmake)
+
 Installing cmake
 ================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `cmake` available on your platform
 ```
 conda search cmake --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cmake-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cmake-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/cmake-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cmake-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cmake-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cmake-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cmake/badges/version.svg)](https://anaconda.org/conda-forge/cmake)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cmake/badges/downloads.svg)](https://anaconda.org/conda-forge/cmake)
 
 
 Updating cmake-feedstock

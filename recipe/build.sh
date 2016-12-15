@@ -9,7 +9,7 @@
 #
 source activate "${CONDA_DEFAULT_ENV}"
 
-if [[ `uname` == 'Darwin' ]];
+if [[ "$(uname)" == 'Darwin' ]];
 then
     export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
 else
