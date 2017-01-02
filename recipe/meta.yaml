@@ -18,8 +18,14 @@ source:
   fn: cmake-{{ version }}-win64-x64.zip                                                   # [win64]
   sha256: 659ecb8207e1266786188c7eaf45308458ba5f719c985970f6f55ec0b5a96746                # [win64]
 
+  patches:
+    # This patch is already upstream
+    # Reference: https://gitlab.kitware.com/cmake/cmake/merge_requests/361.patch
+    - FindBoost-Add-support-for-1.63.patch  # [not win]
+    - FindBoost-Add-support-for-1.63-win.patch  # [win]
+  
 build:
-  number: 3
+  number: 4
   detect_binary_files_with_prefix: true
 
 requirements:
