@@ -10,12 +10,16 @@ source:
   fn: cmake-{{ version }}.tar.gz                                                          # [not win]
   sha256: 449a5bce64dbd4d5b9517ebd1a1248ed197add6ad27934478976fd5f1f9330e1                # [not win]
 
-  url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}-win32-x86.zip       # [win]
-  fn: cmake-{{ version }}-win32-x86.zip                                                   # [win]
-  sha256: d2ec53ba3e3a12f734ed7127704ff9a83361e7cc6f9a0f0b3e2b56d9868a76b9                # [win]
+  url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}-win32-x86.zip       # [win32]
+  fn: cmake-{{ version }}-win32-x86.zip                                                   # [win32]
+  sha256: d2ec53ba3e3a12f734ed7127704ff9a83361e7cc6f9a0f0b3e2b56d9868a76b9                # [win32]
+
+  url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}-win64-x64.zip       # [win64]
+  fn: cmake-{{ version }}-win64-x64.zip                                                   # [win64]
+  sha256: 659ecb8207e1266786188c7eaf45308458ba5f719c985970f6f55ec0b5a96746                # [win64]
 
 build:
-  number: 2
+  number: 3
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -64,3 +68,4 @@ extra:
     - ocefpaf
     - msarahan
     - scopatz
+    - tadeu
