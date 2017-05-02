@@ -1,5 +1,5 @@
-{% set major_minor = "3.7" %}
-{% set version = major_minor + ".1" %}
+{% set major_minor = "3.8" %}
+{% set version = major_minor + ".0" %}
 
 package:
   name: cmake
@@ -8,24 +8,18 @@ package:
 source:
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}.tar.gz              # [not win]
   fn: cmake-{{ version }}.tar.gz                                                          # [not win]
-  sha256: 449a5bce64dbd4d5b9517ebd1a1248ed197add6ad27934478976fd5f1f9330e1                # [not win]
+  sha256: cab99162e648257343a20f61bcd0b287f5e88e36fcb2f1d77959da60b7f35969                # [not win]
 
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}-win32-x86.zip       # [win32]
   fn: cmake-{{ version }}-win32-x86.zip                                                   # [win32]
-  sha256: d2ec53ba3e3a12f734ed7127704ff9a83361e7cc6f9a0f0b3e2b56d9868a76b9                # [win32]
+  sha256: 857fca00974ad6ac12fa042373d85ad1288770d4f09fbd99753c822df76b1c6c                # [win32]
 
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}-win64-x64.zip       # [win64]
   fn: cmake-{{ version }}-win64-x64.zip                                                   # [win64]
-  sha256: 659ecb8207e1266786188c7eaf45308458ba5f719c985970f6f55ec0b5a96746                # [win64]
+  sha256: 602d6c0bd458291d21414f94ee24f5bb623f3a623409e15601cc80b9922ff6bd                # [win64]
 
-  patches:
-    # This patch is already upstream
-    # Reference: https://gitlab.kitware.com/cmake/cmake/merge_requests/361.patch
-    - FindBoost-Add-support-for-1.63.patch  # [not win]
-    - FindBoost-Add-support-for-1.63-win.patch  # [win]
-  
 build:
-  number: 4
+  number: 0
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -40,6 +34,7 @@ requirements:
     - xz 5.2.*       # [unix]
     - zlib 1.2.*     # [unix]
     - libuv          # [unix]
+    - rhash          # [unix]
 
   run:
     - bzip2 1.0.*    # [unix]
@@ -51,6 +46,7 @@ requirements:
     - xz 5.2.*       # [unix]
     - zlib 1.2.*     # [unix]
     - libuv          # [unix]
+    - rhash          # [unix]
     - vs2013_runtime  # [win]
 
 test:
