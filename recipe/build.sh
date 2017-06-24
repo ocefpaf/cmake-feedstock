@@ -21,6 +21,7 @@ fi
              --prefix="${PREFIX}" \
              --system-libs \
              --no-qt-gui \
+             --no-system-libarchive \
              -- \
              -DCMAKE_BUILD_TYPE:STRING=Release \
              -DCMAKE_FIND_ROOT_PATH="${PREFIX}" \
