@@ -19,7 +19,7 @@ source:
   sha256: 602d6c0bd458291d21414f94ee24f5bb623f3a623409e15601cc80b9922ff6bd                # [win64]
 
 build:
-  number: 1
+  number: 2
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -28,7 +28,6 @@ requirements:
     - bzip2 1.0.*    # [unix]
     - curl           # [unix]
     - expat          # [unix]
-    - jsoncpp        # [unix]
     - libarchive     # [unix]
     - ncurses 5.9*   # [unix]
     - xz 5.2.*       # [unix]
@@ -40,7 +39,6 @@ requirements:
     - bzip2 1.0.*    # [unix]
     - curl           # [unix]
     - expat          # [unix]
-    - jsoncpp        # [unix]
     - libarchive     # [unix]
     - ncurses 5.9*   # [unix]
     - xz 5.2.*       # [unix]

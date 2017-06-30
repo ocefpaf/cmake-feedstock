@@ -22,6 +22,7 @@ fi
              --system-libs \
              --no-qt-gui \
              --no-system-libarchive \
+             --no-system-jsoncpp \
              -- \
              -DCMAKE_BUILD_TYPE:STRING=Release \
              -DCMAKE_FIND_ROOT_PATH="${PREFIX}" \
