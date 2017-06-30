@@ -18,5 +18,5 @@ fi
              -DCMAKE_BUILD_TYPE:STRING=Release \
              -DCMAKE_FIND_ROOT_PATH="${PREFIX}" \
 
-make
+make -j ${CPU_COUNT}
 eval ${LIBRARY_SEARCH_VAR}="${PREFIX}/lib" make install
