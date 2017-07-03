@@ -1,14 +1,5 @@
 #!/bin/bash
 
-
-# FIXME: This is a hack to make sure the environment is activated.
-# The reason this is required is due to the conda-build issue
-# mentioned below.
-#
-# https://github.com/conda/conda-build/issues/910
-#
-source activate "${CONDA_DEFAULT_ENV}"
-
 if [[ "$(uname)" == 'Darwin' ]];
 then
     export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
@@ -22,9 +13,11 @@ fi
              --system-libs \
              --no-qt-gui \
              --no-system-libarchive \
+             --no-system-jsoncpp \
+             --parallel=${CPU_COUNT} \
              -- \
              -DCMAKE_BUILD_TYPE:STRING=Release \
              -DCMAKE_FIND_ROOT_PATH="${PREFIX}" \
 
-make
+make -j ${CPU_COUNT}
 eval ${LIBRARY_SEARCH_VAR}="${PREFIX}/lib" make install
