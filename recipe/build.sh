@@ -1,12 +1,4 @@
-#!/bin/bash
-
-if [[ "$(uname)" == 'Darwin' ]];
-then
-    export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
-else
-    export LIBRARY_SEARCH_VAR=LD_LIBRARY_PATH
-fi
-
+#!/bin/sh
 
 ./bootstrap \
              --prefix="${PREFIX}" \
@@ -18,6 +10,5 @@ fi
              -- \
              -DCMAKE_BUILD_TYPE:STRING=Release \
              -DCMAKE_FIND_ROOT_PATH="${PREFIX}" \
-
-make -j ${CPU_COUNT}
-eval ${LIBRARY_SEARCH_VAR}="${PREFIX}/lib" make install
+             -DCMAKE_INSTALL_RPATH="${PREFIX}/lib"
+make install -j${CPU_COUNT}
