@@ -1,5 +1,5 @@
 {% set major_minor = "3.9" %}
-{% set version = major_minor + ".0" %}
+{% set version = major_minor + ".1" %}
 
 package:
   name: cmake
@@ -8,15 +8,15 @@ package:
 source:
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}.tar.gz              # [not win]
   fn: cmake-{{ version }}.tar.gz                                                          # [not win]
-  sha256: 167701525183dbb722b9ffe69fb525aa2b81798cf12f5ce1c020c93394dfae0f                # [not win]
+  sha256: d768ee83d217f91bb597b3ca2ac663da7a8603c97e1f1a5184bc01e0ad2b12bb                # [not win]
 
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}-win32-x86.zip       # [win32]
   fn: cmake-{{ version }}-win32-x86.zip                                                   # [win32]
-  sha256: 9d593839f64b94718a1b75b8519b56ecb959e4d37d406bf2a087e2c1f7a6b89c                # [win32]
+  sha256: e0d9501bd34e3100e925dcb2e07f5f0ce8980bdbe5fce0ae950b21368d54c1a1                # [win32]
 
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}-win64-x64.zip       # [win64]
   fn: cmake-{{ version }}-win64-x64.zip                                                   # [win64]
-  sha256: 584f5c58f322481f29fee482b7627751917ec916fd312de7ced6b046bd55c2f5                # [win64]
+  sha256: a3226743c0b160f8f402aa72103a2ec391a8ba5556c49ddd047b1c62a9f75ffb                # [win64]
 
 build:
   number: 0
