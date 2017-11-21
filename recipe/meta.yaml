@@ -47,7 +47,6 @@ requirements:
     - zlib 1.2.*     # [unix]
     - libuv          # [unix]
     - rhash          # [unix]
-    - vs2013_runtime  # [win]
 
 test:
   files:
