@@ -18,6 +18,10 @@ source:
   fn: cmake-{{ version }}-win64-x64.zip                                                   # [win64]
   sha256: b530586b92241bc10aaaaa391bc9b8f1ae830a676050f9f5e6003d2ce6085abc                # [win64]
 
+  patches:
+    # Revert the whole commit in 3.11
+    - flang-fix.patch   # [win]
+
 build:
   number: 0
   detect_binary_files_with_prefix: true
