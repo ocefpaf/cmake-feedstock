@@ -1,5 +1,5 @@
-{% set major_minor = "3.9" %}
-{% set version = major_minor + ".6" %}
+{% set major_minor = "3.10" %}
+{% set version = major_minor + ".0" %}
 
 package:
   name: cmake
@@ -8,15 +8,19 @@ package:
 source:
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}.tar.gz              # [not win]
   fn: cmake-{{ version }}.tar.gz                                                          # [not win]
-  sha256: 7410851a783a41b521214ad987bb534a7e4a65e059651a2514e6ebfc8f46b218                # [not win]
+  sha256: b3345c17609ea0f039960ef470aa099de9942135990930a57c14575aae884987                # [not win]
 
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}-win32-x86.zip       # [win32]
   fn: cmake-{{ version }}-win32-x86.zip                                                   # [win32]
-  sha256: 8dd4b6c35afa8e0c044789b55645327cc4bb75276f87c6758f9997c08f559256                # [win32]
+  sha256: dce666e897f95a88d3eed6cddd1faa3f44179d519b33ca6065b385bbc7072419                # [win32]
 
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}-win64-x64.zip       # [win64]
   fn: cmake-{{ version }}-win64-x64.zip                                                   # [win64]
-  sha256: fa667bf658fa526e4e2489a9704f83f851e5ded66a18904424ba1b8505fd4dc0                # [win64]
+  sha256: b530586b92241bc10aaaaa391bc9b8f1ae830a676050f9f5e6003d2ce6085abc                # [win64]
+
+  patches:
+    # Revert the whole commit in 3.11
+    - flang-fix.patch   # [win]
 
 build:
   number: 1
@@ -43,7 +47,6 @@ requirements:
     - zlib 1.2.11     # [unix]
     - libuv          # [unix]
     - rhash          # [unix]
-    - vs2013_runtime  # [win]
 
 test:
   files:

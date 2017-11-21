@@ -8,11 +8,12 @@ if errorlevel 1 exit 1
 move bin\ctest.exe %LIBRARY_BIN%\
 if errorlevel 1 exit 1
 
-REM This file needs to be in a separate package.
-REM Just make sure that it exists here so we can detect when cmake people
+REM Just make sure that no dll exists here so we can detect when cmake people
 REM decide to change the dependency.
-dir bin\msvcr120.dll
-if errorlevel 1 exit 1
+dir bin\*.dll
+if not errorlevel 1 exit 1
 
 move share %LIBRARY_PREFIX%\
 if errorlevel 1 exit 1
+
+cp %RECIPE_DIR%\Windows-Flang-Fortran.cmake %LIBRARY_PREFIX%\share\cmake-3.10\Modules\Platform\
