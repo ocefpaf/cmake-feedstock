@@ -11,7 +11,7 @@ if errorlevel 1 exit 1
 REM Just make sure that no dll exists here so we can detect when cmake people
 REM decide to change the dependency.
 dir bin\*.dll
-if errorlevel 0 exit 1
+if not errorlevel 1 exit 1
 
 move share %LIBRARY_PREFIX%\
 if errorlevel 1 exit 1
