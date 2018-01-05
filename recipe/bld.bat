@@ -17,3 +17,4 @@ move share %LIBRARY_PREFIX%\
 if errorlevel 1 exit 1
 
 cp %RECIPE_DIR%\Windows-Flang-Fortran.cmake %LIBRARY_PREFIX%\share\cmake-3.10\Modules\Platform\
+cp %RECIPE_DIR%\FindBoost.cmake %LIBRARY_PREFIX%\share\cmake-3.10\Modules\
