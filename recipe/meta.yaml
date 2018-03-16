@@ -25,7 +25,7 @@ requirements:
     - toolchain
     - bzip2 1.0.*  # [unix]
     - curl >=7.44.0,<8  # [unix]
-    - expat  # [unix]
+    - expat 2.2.*  # [unix]
     - ncurses 5.9*  # [unix]
     - xz 5.2.*  # [unix]
     - zlib 1.2.11  # [unix]
@@ -35,7 +35,7 @@ requirements:
   run:
     - bzip2 1.0.*  # [unix]
     - curl >=7.44.0,<8  # [unix]
-    - expat  # [unix]
+    - expat 2.2.*  # [unix]
     - ncurses 5.9*  # [unix]
     - xz 5.2.*  # [unix]
     - zlib 1.2.11  # [unix]
