@@ -1,4 +1,4 @@
-{% set version = "3.10.2" %}
+{% set version = "3.10.3" %}
 {% set major_minor = '.'.join(version.split(".")[:2]) %}
 
 package:
@@ -8,7 +8,7 @@ package:
 source:
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}.tar.gz
   fn: cmake-{{ version }}.tar.gz
-  sha256: 80d0faad4ab56de07aa21a7fc692c88c4ce6156d42b0579c6962004a70a3218b
+  sha256: 0c3a1dcf0be03e40cf4f341dda79c96ffb6c35ae35f2f911845b72dab3559cf8
 
   patches:
     # Revert the whole commit in 3.11
@@ -16,7 +16,7 @@ source:
     - cmake-3.10-boost-1.66-support.patch
 
 build:
-  number: 4
+  number: 0
   detect_binary_files_with_prefix: true
   msvc_compiler: 14.0
 
@@ -25,7 +25,7 @@ requirements:
     - toolchain
     - bzip2 1.0.*  # [unix]
     - curl >=7.44.0,<8  # [unix]
-    - expat  # [unix]
+    - expat 2.2.*  # [unix]
     - ncurses 5.9*  # [unix]
     - xz 5.2.*  # [unix]
     - zlib 1.2.11  # [unix]
@@ -35,7 +35,7 @@ requirements:
   run:
     - bzip2 1.0.*  # [unix]
     - curl >=7.44.0,<8  # [unix]
-    - expat  # [unix]
+    - expat 2.2.*  # [unix]
     - ncurses 5.9*  # [unix]
     - xz 5.2.*  # [unix]
     - zlib 1.2.11  # [unix]
