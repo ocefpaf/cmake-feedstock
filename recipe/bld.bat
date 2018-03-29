@@ -20,4 +20,3 @@ if errorlevel 1 exit 1
 cmake --build . --config %CMAKE_CONFIG% --target install
 if errorlevel 1 exit 1
 
-cp %RECIPE_DIR%\Windows-Flang-Fortran.cmake %LIBRARY_PREFIX%\share\cmake-3.10\Modules\Platform\

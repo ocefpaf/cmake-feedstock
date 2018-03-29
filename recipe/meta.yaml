@@ -10,14 +10,8 @@ source:
   fn: cmake-{{ version }}.tar.gz
   sha256: c313bee371d4d255be2b4e96fd59b11d58bc550a7c78c021444ae565709a656b
 
-  patches:
-    # Revert the whole commit in 3.11
-    - flang-fix.patch
-    - cmake-3.10-boost-1.66-support.patch
-
 build:
   number: 0
-  detect_binary_files_with_prefix: true
   msvc_compiler: 14.0
 
 requirements:
