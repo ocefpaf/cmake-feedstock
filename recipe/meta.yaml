@@ -1,4 +1,4 @@
-{% set version = "3.10.3" %}
+{% set version = "3.11.0" %}
 {% set major_minor = '.'.join(version.split(".")[:2]) %}
 
 package:
@@ -8,16 +8,10 @@ package:
 source:
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}.tar.gz
   fn: cmake-{{ version }}.tar.gz
-  sha256: 0c3a1dcf0be03e40cf4f341dda79c96ffb6c35ae35f2f911845b72dab3559cf8
-
-  patches:
-    # Revert the whole commit in 3.11
-    - flang-fix.patch
-    - cmake-3.10-boost-1.66-support.patch
+  sha256: c313bee371d4d255be2b4e96fd59b11d58bc550a7c78c021444ae565709a656b
 
 build:
   number: 0
-  detect_binary_files_with_prefix: true
   msvc_compiler: 14.0
 
 requirements:
