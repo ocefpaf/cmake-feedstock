@@ -7,7 +7,6 @@ package:
 
 source:
   url: https://cmake.org/files/v{{ major_minor }}/cmake-{{ version }}.tar.gz
-  fn: cmake-{{ version }}.tar.gz
   sha256: c313bee371d4d255be2b4e96fd59b11d58bc550a7c78c021444ae565709a656b
 
 build:
@@ -45,6 +44,8 @@ test:
     - cmake -V -P SSLTest.cmake
     - ctest --version
     - cpack --version
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.cmake.org/
